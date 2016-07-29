@@ -1,0 +1,129 @@
+snippet ptest "polymer test"
+<!doctype html>
+<html>
+
+<head>
+	<title>${1} test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+	<script src="../../web-component-tester/browser.js"></script>
+
+	<link rel="import" href="../src/$1.html">
+</head>
+
+<body>
+	<test-fixture id="basic">
+		<template>
+			<$1
+			></$1>
+		</template>
+	</test-fixture>
+
+	<script>
+		describe('<$1>', () => {
+			it('works', () => {
+				const element = fixture('basic');
+				expect(element.is).to.equal('$1');
+			});
+		});
+	</script>
+</body>
+
+</html>
+endsnippet
+
+snippet pbtest "polymer behavior test"
+<!doctype html>
+<html>
+
+<head>
+	<title>${1} test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+	<script src="../../web-component-tester/browser.js"></script>
+
+	<link rel="import" href="../src/$1.html">
+</head>
+
+<body>
+	<test-fixture id="basic">
+		<template>
+			<x-$1
+			></x-$1>
+		</template>
+	</test-fixture>
+
+	<script>
+		addEventListener('WebComponentsReady', () => {
+			Polymer({
+				is: 'x-$1',
+				behaviors: [${2}.${3}Behavior]
+			});
+		});
+
+		describe('<$1>', () => {
+			it('works', () => {
+				const element = fixture('basic');
+				expect(element.is).to.equal('x-$1');
+			});
+		});
+	</script>
+</body>
+
+</html>
+endsnippet
+
+snippet tit
+it('${1}', () => {
+});
+endsnippet
+
+snippet tctx
+context('${1}', () => {
+	tit$2
+});
+endsnippet
+
+snippet tdes
+describe('${1}', () => {
+	tit$2
+});
+endsnippet
+
+snippet pfix "polymer test fixture"
+<test-fixture id="${1}">
+	<template>
+		<${2}
+		></$2>
+	</template>
+</test-fixture>
+endsnippet
+
+snippet pel "polymer element"
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="${1}">
+	<script>
+		Polymer({
+			is: '$1',
+			properties: {
+			}
+		});
+	</script>
+</dom-module>
+endsnippet
+
+snippet pbeh "polymer behavior"
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<script>
+	window.${1} = window.$1 || {};
+
+	$1.${2}Behavior = {
+		properties: {
+			
+		}
+	}
+</script>
+endsnippet

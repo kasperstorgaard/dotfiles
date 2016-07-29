@@ -1,0 +1,11 @@
+bower/
+node_modules/
+bower_modules/
+*.tmp*
+*.min.*
+*.css
+dist/
+lib/
+.git/
+/.git/
+

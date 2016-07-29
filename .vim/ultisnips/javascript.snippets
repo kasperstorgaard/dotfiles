@@ -1,0 +1,65 @@
+snippet falc	
+(function() {
+	'use strict';
+
+	angular
+		.module('Falcon')
+		.$1('$2', $3);
+
+	function $3() {
+
+	}
+})();
+endsnippet
+
+snippet tit
+it('$1', () => {
+});
+endsnippet
+
+snippet tctx
+context('$1', () => {
+	tit$2
+});
+endsnippet
+
+snippet tbase
+describe('$1', () => {
+	tbef$2
+
+	tctx$3
+});
+endsnippet
+
+snippet tbef
+beforeEach(() => {
+	angular.mock.module('Falcon');
+	
+	angular.mock.inject($injector => {
+		$1
+	});
+});
+endsnippet
+
+snippet tctrl
+describe('$1', () => {
+	let instantiateCtrl;
+	
+	beforeEach(() => {
+		angular.mock.module('Falcon');
+
+		instantiateCtrl = (attrs = {}) => {
+			return $controller('$1', {
+
+			}, attrs);
+		};
+	});
+
+	it('is defined', () => {
+		const instance = instantiateCtrl();
+		expect(instance).to.be.defined;
+	});
+
+	tctx$2
+});
+endsnippet
