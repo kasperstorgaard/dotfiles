@@ -92,6 +92,14 @@ describe('${1}', () => {
 });
 endsnippet
 
+snippet ptdef
+it('is defined', () => {
+	const element = fixture('basic');
+	expect(element).to.have.property('$1')
+		.that.is.a$2.$3;
+});
+endsnippet
+
 snippet pfix "polymer test fixture"
 <test-fixture id="${1}">
 	<template>
@@ -102,7 +110,7 @@ snippet pfix "polymer test fixture"
 endsnippet
 
 snippet pel "polymer element"
-<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../polymer/polymer.html">
 
 <dom-module id="${1}">
 	<script>
@@ -116,7 +124,7 @@ snippet pel "polymer element"
 endsnippet
 
 snippet pbeh "polymer behavior"
-<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../polymer/polymer.html">
 <script>
 	window.${1} = window.$1 || {};
 
