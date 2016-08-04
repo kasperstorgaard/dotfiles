@@ -12,6 +12,9 @@
 .vim/plugged/*
 .vim/.netrwhist
 
+!.tmuxinator/*
+!.bin/*
+
 !.vimrc
 !.vim
 !.zshrc
