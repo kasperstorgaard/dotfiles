@@ -1,0 +1,16 @@
+# ~/.tmuxinator/html-client.yml
+
+name: html-client
+root: ~/Git/FalconSocial/HTML-Client/
+
+windows:
+  - runner:
+      layout: c751,364x80,0,0{243x80,0,0,1,120x80,244,0[120x40,244,0,2,120x39,244,41,3]}
+      panes:
+        - gs
+        - npm run babel
+        - grunt dev-nr
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim

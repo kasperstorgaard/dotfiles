@@ -12,6 +12,7 @@
 .vim/plugged/*
 .vim/.netrwhist
 
+!.tmuxinator/
 !.tmuxinator/*
 !.bin/*
 
