@@ -16,6 +16,7 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'bendavis78/vim-polymer'
 Plug 'karlbright/qfdo.vim'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
