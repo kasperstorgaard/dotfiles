@@ -1,7 +1,7 @@
 # ~/.tmuxinator/git.yml
 
 name: git
-root: ~/Git
+root: ~/Git/<%= @args[0] %>
 
 windows:
   - runner:
