@@ -24,5 +24,6 @@ git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
 # tmuxinator
 gem install tmuxinator
 
-# gitbar
-git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar
+# YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --tern-completer
