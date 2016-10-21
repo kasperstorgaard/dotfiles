@@ -17,9 +17,11 @@ Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'mtscout6/syntastic-local-eslint.vim'
-Plug 'bendavis78/vim-polymer'
+Plug 'myw/vim-polymer'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Quramy/tsuquyomi'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -128,6 +130,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_html_checkers = ["polylint", "eslint"]
+let g:syntastic_ts_checkers = ["tslint"]
 
 "--- vim-jsdoc ---"
 let g:jsdoc_enable_es6 = 1

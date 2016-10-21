@@ -6,10 +6,10 @@ snippet ptest "polymer test"
 	<title>${1} test</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-	<script src="../../web-component-tester/browser.js"></script>
+	<script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+	<script src="../../../web-component-tester/browser.js"></script>
 
-	<link rel="import" href="../src/$1.html">
+	<link rel="import" href="./$1.html">
 </head>
 
 <body>
@@ -41,10 +41,10 @@ snippet pbtest "polymer behavior test"
 	<title>${1} test</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-	<script src="../../web-component-tester/browser.js"></script>
+	<script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+	<script src="../../../web-component-tester/browser.js"></script>
 
-	<link rel="import" href="../src/$1.html">
+	<link rel="import" href="./$1.html">
 </head>
 
 <body>
@@ -100,6 +100,18 @@ it('is defined', () => {
 });
 endsnippet
 
+snippet ptnot "polymer behavior"
+it('notifies', () => {
+	const element = fixture('basic');
+
+	const spy = sinon.spy();
+	element.addEventListener('$1-changed', spy);
+	element.set('$1', $2);
+
+	expect(spy).to.have.been.calledOnce;
+});
+endsnippet
+
 snippet pfix "polymer test fixture"
 <test-fixture id="${1}">
 	<template>
@@ -110,7 +122,7 @@ snippet pfix "polymer test fixture"
 endsnippet
 
 snippet pel "polymer element"
-<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../../polymer/polymer.html">
 
 <dom-module id="${1}">
 	<script>
@@ -124,7 +136,7 @@ snippet pel "polymer element"
 endsnippet
 
 snippet pbeh "polymer behavior"
-<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../../polymer/polymer.html">
 <script>
 	window.${1} = window.$1 || {};
 
@@ -134,4 +146,38 @@ snippet pbeh "polymer behavior"
 		}
 	}
 </script>
+endsnippet
+
+snippet pdemo
+<!doctype html>
+<html>
+	<head>
+		<title>$1 demo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+		<link rel="import" href="../../../iron-demo-helpers/demo-pages-shared-styles.html">
+		<link rel="import" href="../../../iron-demo-helpers/demo-snippet.html">
+		<link href="../../../eyas/dist/eyas.css" rel="stylesheet" type="text/css">
+
+		<link rel="import" href="./$1.html">
+
+		<style is="custom-style" include="demo-pages-shared-styles"></style>
+	</head>
+	<body>
+		<div class="vertical-section-container">
+			<h3>Basic $1 Demo</h3>
+			<demo-snippet>
+				<template>
+					<template is="dom-bind">
+						<style>
+						</style>
+						<$1></$1>
+					</template>
+				</template>
+			</demo-snippet>
+		</div>
+	</body>
+</html>
 endsnippet

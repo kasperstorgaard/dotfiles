@@ -9,7 +9,7 @@ windows:
       panes:
         - gs
         - npm run babel
-        - grunt dev-nr
+        - gulp dev --watch
   - editor:
       layout: main-vertical
       panes:

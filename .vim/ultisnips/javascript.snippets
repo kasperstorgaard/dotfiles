@@ -63,3 +63,25 @@ describe('$1', () => {
 	tctx$2
 });
 endsnippet
+
+snippet tserv
+describe('$1', () => {
+	let subject;
+
+	beforeEach(() => {
+		angular.mock.module('Falcon');
+
+		angular.mock.inject($injector => {
+			subject = $injector.get('$1');
+		});
+
+		// mocks
+	});
+
+	it('is defined', () => {
+		expect(subject).to.be.defined;
+	});
+
+	tctx
+});
+endsnippet

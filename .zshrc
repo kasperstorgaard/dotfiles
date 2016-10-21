@@ -36,6 +36,11 @@ alias bnice='rm -rf http-pub/bower && bower cache clean && bower update'
 # Ag (the_silver_searcher):
 alias ag='ag --path-to-agignore ~/.agignore'
 
+# Tmux alias
+alias txs='tmux switch -t'
+alias txd='tmux detach'
+alias txr='tmux rename-session -t'
+
 # Scm breeze (git numbers and more)
 [ -s "/Users/kasperstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kasperstorgaard/.scm_breeze/scm_breeze.sh"
 
