@@ -124,7 +124,18 @@ endsnippet
 snippet pel "polymer element"
 <link rel="import" href="../../../polymer/polymer.html">
 
-<dom-module id="${1}">
+<!--
+	\`${1}\`
+	${2} component
+
+	@demo src/$1/$1_demo.html
+-->
+
+<dom-module id="$1">
+	<template strip-whitespace>
+		<style>
+		</style>
+	</template>
 	<script>
 		Polymer({
 			is: '$1',
@@ -138,9 +149,10 @@ endsnippet
 snippet pbeh "polymer behavior"
 <link rel="import" href="../../../polymer/polymer.html">
 <script>
+	window.Falcon = window.Falcon || {};
 	window.${1} = window.$1 || {};
 
-	$1.${2}Behavior = {
+	window.$1.${2}Behavior = {
 		properties: {
 			
 		}
@@ -155,7 +167,7 @@ snippet pdemo
 		<title>$1 demo</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
 
 		<link rel="import" href="../../../iron-demo-helpers/demo-pages-shared-styles.html">
 		<link rel="import" href="../../../iron-demo-helpers/demo-snippet.html">
@@ -169,12 +181,10 @@ snippet pdemo
 		<div class="vertical-section-container">
 			<h3>Basic $1 Demo</h3>
 			<demo-snippet>
-				<template>
-					<template is="dom-bind">
-						<style>
-						</style>
-						<$1></$1>
-					</template>
+				<template is="dom-bind">
+					<style>
+					</style>
+					<$1></$1>
 				</template>
 			</demo-snippet>
 		</div>
