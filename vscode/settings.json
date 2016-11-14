@@ -1,0 +1,19 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "node_modules/**": true,
+        "bower_components/**": true,
+        ".tmp/**": true,
+        "hooks/**": true
+    },
+    "eslint.options": {
+        "ext": [".es6", ".html"]
+    },
+    "window.zoomLevel": 0,
+    "typescript.check.workspaceVersion": false,
+    "tslint.exclude": "./node_modules/**/*.*",
+    "tslint.run": "onSave"
+}
