@@ -40,6 +40,7 @@ alias ag='ag --path-to-agignore ~/.agignore'
 alias txs='tmux switch -t'
 alias txd='tmux detach'
 alias txr='tmux rename-session -t'
+alias txl='tmux list-sessions'
 
 # Scm breeze (git numbers and more)
 [ -s "/Users/kasperstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kasperstorgaard/.scm_breeze/scm_breeze.sh"
