@@ -12,8 +12,9 @@
     "eslint.options": {
         "ext": [".es6", ".html"]
     },
+    "javascript.validate.enable": false,
     "window.zoomLevel": 0,
-    "typescript.check.workspaceVersion": false,
     "tslint.exclude": "./node_modules/**/*.*",
-    "tslint.run": "onSave"
+    "tslint.run": "onSave",
+    "typescript.check.workspaceVersion": false
 }
