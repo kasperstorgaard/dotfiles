@@ -10,18 +10,17 @@ Plug 'rking/ag.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'SirVer/ultisnips'
-Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'heavenshell/vim-jsdoc'
+" Plug 'heavenshell/vim-jsdoc'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'myw/vim-polymer'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Quramy/tsuquyomi'
+" Plug 'Quramy/tsuquyomi'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -130,6 +129,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_html_checkers = ["polylint", "eslint"]
+let g:syntastic_typescript_checkers = ["tslint"]
 let g:syntastic_ts_checkers = ["tslint"]
 
 "--- vim-jsdoc ---"
