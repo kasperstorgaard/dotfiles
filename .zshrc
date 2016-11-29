@@ -23,6 +23,7 @@ alias gx='gitx --all'
 alias gps='git push --set-upstream origin $(git_current_branch)'
 alias gpl='git pull'
 alias gir='git rebase -i'
+alias grc='git rebase --continue'
 
 # Path alias
 alias falc='cd ~/Git/FalconSocial/HTML-client/'
