@@ -1,1 +1,3 @@
-.vscode/**/**/*.*
+.vscode/extensions/*
+!.vscode/extensions/**/.git
+!.vscode/extensions/**/package.json

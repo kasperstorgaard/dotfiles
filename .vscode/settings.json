@@ -1,0 +1,25 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "node_modules/**": true,
+        "bower_components/**": true,
+        ".tmp/**": true,
+        "hooks/**": true,
+        "dev/**": true,
+        "dist/**": true,
+        "build/**": true,
+        "jspm_packages": true
+    },
+    "eslint.options": {
+        "ext": [".es6", ".html"]
+    },
+    "window.zoomLevel": 1,
+    "tslint.exclude": "./node_modules/**/*.*",
+    "tslint.run": "onSave",
+    "typescript.check.workspaceVersion": true,
+    "editor.cursorStyle": "block",
+    "typescript.check.tscVersion": false
+}
