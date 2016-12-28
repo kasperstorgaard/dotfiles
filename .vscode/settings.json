@@ -10,16 +10,17 @@
         "hooks/**": true,
         "dev/**": true,
         "dist/**": true,
-        "build/**": true,
-        "jspm_packages": true
+        "jspm_packages": true,
+        "rethinkdb_data": true
     },
     "eslint.options": {
         "ext": [".es6", ".html"]
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "tslint.exclude": "./node_modules/**/*.*",
     "tslint.run": "onSave",
     "typescript.check.workspaceVersion": true,
     "editor.cursorStyle": "block",
-    "typescript.check.tscVersion": false
+    "typescript.check.tscVersion": false,
+    "editor.cursorBlinking": "blink"
 }
