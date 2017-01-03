@@ -26,13 +26,11 @@ alias gir='git rebase -i'
 alias grc='git rebase --continue'
 
 # Path alias
-alias falc='cd ~/Git/FalconSocial/HTML-client/'
 alias gogit='cd ~/Git'
+alias gomom='cd ~/Git/momondo/momondo-web'
+alias gopro='cd ~/Git/projects'
 alias vim='/usr/local/bin/vim'
 alias vimrc='vim ~/.vimrc'
-
-# Bower alias
-alias bnice='rm -rf http-pub/bower && bower cache clean && bower update'
 
 # Ag (the_silver_searcher):
 alias ag='ag --path-to-agignore ~/.agignore'
@@ -52,3 +50,5 @@ tmux source-file ~/.tmux.conf
 
 # Tmuxinator
 source ~/.bin/tmuxinator.zsh
+
+[ -s "/Users/kstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kstorgaard/.scm_breeze/scm_breeze.sh"
