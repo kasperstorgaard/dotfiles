@@ -1,0 +1,20 @@
+# ~/.tmuxinator/momondo.yml
+
+name: momondo
+root: ~/Git/momondo/momondo-web
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+tmux_options: -f ~/.tmux.conf
+
+post: gulp dev-all
+
+windows:
+  - editor:
+      layout: main-vertical
+
