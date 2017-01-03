@@ -32,6 +32,9 @@ alias gopro='cd ~/Git/projects'
 alias vim='/usr/local/bin/vim'
 alias vimrc='vim ~/.vimrc'
 
+# Momondo alias
+alias gdev='sudo gulp dev-all'
+
 # Ag (the_silver_searcher):
 alias ag='ag --path-to-agignore ~/.agignore'
 
