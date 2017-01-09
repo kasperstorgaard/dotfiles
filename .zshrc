@@ -34,6 +34,7 @@ alias vimrc='vim ~/.vimrc'
 
 # Momondo alias
 alias gdev='sudo gulp dev-all'
+alias gtu='gulp test.units'
 
 # Ag (the_silver_searcher):
 alias ag='ag --path-to-agignore ~/.agignore'
@@ -45,13 +46,11 @@ alias txr='tmux rename-session -t'
 alias txl='tmux list-sessions'
 alias txa='tmux attach -t'
 
-# Scm breeze (git numbers and more)
-[ -s "/Users/kasperstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kasperstorgaard/.scm_breeze/scm_breeze.sh"
-
 # Tmux
 tmux source-file ~/.tmux.conf
 
 # Tmuxinator
 source ~/.bin/tmuxinator.zsh
 
+# Scm breeze (git numbers and more)
 [ -s "/Users/kstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kstorgaard/.scm_breeze/scm_breeze.sh"
