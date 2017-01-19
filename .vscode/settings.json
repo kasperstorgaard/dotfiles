@@ -21,5 +21,7 @@
     "typescript.check.tscVersion": false,
     "editor.cursorBlinking": "blink",
     "docthis.includeMemberOfOnClassMembers": false,
-    "docthis.includeMemberOfOnInterfaceMembers": false
+    "docthis.includeMemberOfOnInterfaceMembers": false,
+    "docthis.includeTypes": false,
+    "editor.tabCompletion": true
 }
