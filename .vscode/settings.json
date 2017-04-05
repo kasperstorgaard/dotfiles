@@ -20,8 +20,12 @@
     "editor.cursorStyle": "block",
     "typescript.check.tscVersion": false,
     "editor.cursorBlinking": "blink",
-    "docthis.includeMemberOfOnClassMembers": false,
-    "docthis.includeMemberOfOnInterfaceMembers": false,
-    "docthis.includeTypes": false,
-    "editor.tabCompletion": true
+    "editor.tabCompletion": true,
+    "files.associations": {
+        "*.tag": "htmltag",
+        "*.vue": "vue"
+    },
+    "editor.rulers": [
+        100
+    ]
 }

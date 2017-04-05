@@ -20,9 +20,5 @@
     {
         "key": "ctrl+l",
         "command": "workbench.action.focusNextGroup"
-    },
-    {
-        "key": "ctrl+\\",
-        "command": "docthis.documentThis"
     }
 ]
