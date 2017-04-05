@@ -6,21 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'rking/ag.vim'
-Plug 'Valloric/YouCompleteMe'
-Plug 'ternjs/tern_for_vim'
-Plug 'SirVer/ultisnips'
-Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
-Plug 'airblade/vim-gitgutter'
-" Plug 'heavenshell/vim-jsdoc'
-Plug 'mtscout6/syntastic-local-eslint.vim'
-Plug 'myw/vim-polymer'
-" Plug 'Quramy/tsuquyomi'
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -45,7 +31,6 @@ set smartcase
 " set nowrapscan
 set showmatch
 
-
 "--- tabs ---"
 set expandtab
 set tabstop=4
@@ -66,8 +51,6 @@ set laststatus=2
 set nowritebackup
 set ttyfast
 set lazyredraw
-"set conceallevel=1
-"hi Conceal ctermbg=232 ctermfg=81
 
 "--- dirs ---"
 set backupdir=~/.vim/backup//
@@ -115,29 +98,6 @@ let g:ctrlp_user_command="ag %s -l --nocolor --hidden -g \"\""
 
 "--- Tmux copy-paste ---"
 set clipboard=unnamed
-
-"--- UltiSnips ---"
-let g:UltiSnipsExpandTrigger="<S-CR>"
-let g:UltiSnipsSnippetDirectories=[$HOME."/.vim/ultisnips"]
-
-"--- Syntastic ---"
-nmap <silent> <F6> :SyntasticToggleMode<CR>
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ["eslint"]
-let g:syntastic_html_checkers = ["polylint", "eslint"]
-let g:syntastic_typescript_checkers = ["tslint"]
-let g:syntastic_ts_checkers = ["tslint"]
-
-"--- vim-jsdoc ---"
-let g:jsdoc_enable_es6 = 1
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-let g:jsdoc_return_description = 0
-nmap <silent> <C-b> ?\<\(function\\|get\\|set\\|class\)\><CR>:noh<CR><Plug>(jsdoc)
 
 "--- air-line ---"
 let g:airline_powerline_fonts = 1
