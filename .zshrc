@@ -8,9 +8,6 @@ plugins=(git)
 # Tmux
 tmux source-file ~/.tmux.conf
 
-# Tmuxinator
-source ~/.bin/tmuxinator.zsh
-
 # Tmux alias
 alias txs='tmux switch -t'
 alias txd='tmux detach'
@@ -23,12 +20,10 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
-# Scm breeze (git numbers and more)
-[ -s "/Users/kstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kstorgaard/.scm_breeze/scm_breeze.sh"
-
 # Nvm
 export NVM_DIR="/Users/kstorgaard/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm use
 
 # Git alias
 alias gs='git status '
@@ -57,3 +52,8 @@ alias gclean='rm -rf node_modules/ && rm -rf jspm_packages/ && npm i && jspm ins
 
 # Ag (the_silver_searcher):
 alias ag='ag --path-to-agignore ~/.agignore'
+
+# Scm breeze (git numbers and more)
+[ -s "/Users/kstorgaard/.scm_breeze/scm_breeze.sh" ] && source "/Users/kstorgaard/.scm_breeze/scm_breeze.sh"
+
+source "/Users/kstorgaard/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
