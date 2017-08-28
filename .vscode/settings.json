@@ -13,19 +13,27 @@
         "jspm_packages": true,
         "rethinkdb_data": true
     },
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "tslint.exclude": "./node_modules/**/*.*",
     "tslint.run": "onSave",
-    "typescript.check.workspaceVersion": true,
     "editor.cursorStyle": "block",
     "typescript.check.tscVersion": false,
     "editor.cursorBlinking": "blink",
     "editor.tabCompletion": true,
     "files.associations": {
         "*.tag": "htmltag",
-        "*.vue": "vue"
+        "*.vue": "vue",
+        "*.graphcool": "graphql"
     },
-    "editor.rulers": [
-        100
-    ]
+    "editor.rulers": [100],
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "vim.enableNeovim": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#333"
+    },
+    "gitblame.commitUrl": "https://bitbucket.org/mmweb/momondo-web/commits/${hash}"
 }
